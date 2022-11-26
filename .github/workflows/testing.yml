@@ -9,6 +9,7 @@ jobs:
   build:
     name: Run API
     runs-on: ubuntu-latest
+    if: (github.ref == 'workflow_dispatch' || github.ref == 'refs/heads/java_branc')
     steps:
       - name: Build API
         run: |
